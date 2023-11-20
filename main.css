@@ -1,0 +1,18 @@
+p {
+    margin: 0px;
+}
+
+fieldset {
+    width: fit-content;
+}
+
+.cell {
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+    overflow: hidden;
+}
+
+textarea {
+    resize: none;
+}

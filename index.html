@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>LifeBox</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <p>States</p>
+                <textarea spellcheck="false" id="states">empty 000</textarea>
+            </td>
+            <td>
+                <p>Reflections</p>
+                <textarea spellcheck="false" id="reflections"></textarea>
+            </td>
+            <td>
+                <p>Neighborhoods</p>
+                <textarea spellcheck="false" id="neighborhoods">neumann 0,-1 -1,0 1,0 0,1&NewLine;moore -1,-1 0,-1 1,-1 -1,0 1,0 -1,1 0,1 1,1&NewLine;knight -1,-2 1,-2 -2,-1 2,-1 -2,1 2,1 -1,2 1,2</textarea>
+            </td>
+            <td>
+                <p>Rules</p>
+                <textarea spellcheck="false" id="rules">empty -> empty</textarea>
+            </td>
+        </tr>
+    </table>
+    <button id="compile">Compile</button>
+    <fieldset>
+        <legend>Grid</legend>
+        <label for="horizontal">Horizontal Connection:</label>
+        <select id="horizontal">
+            <option value="unconnect">Unconnected</option>
+            <option value="connect">Connected</option>
+            <option value="flip">Flipped</option>
+        </select><br>
+        <label for="vertical">Vertical Connection:</label>
+        <select id="vertical">
+            <option value="unconnect">Unconnected</option>
+            <option value="connect">Connected</option>
+            <option value="flip">Flipped</option>
+        </select>
+        <p>Note: Using "Flipped" can cause unexpected results with directional automatons.</p>
+    </fieldset>
+    <table id="board"></table>
+    <select id="mode">
+        <option value="edit">Edit</option>
+        <option value="run">Run</option>
+    </select>
+    <div id="controls" hidden>
+        <button id="step">Step</button>
+    </div>
+</body>
+<script src='main.js'></script>
+
+</html>
